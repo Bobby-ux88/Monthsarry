@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>May 14</title>
+    <link rel="stylesheet" href="styles1.css">
+    <style>
+        body {
+            opacity: 0;
+            transition: opacity 1s ease-in-out;
+        }
+
+        body.loaded {
+            opacity: 1;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>May 14</h1>
+        <div class="image-center">
+            <img src="ashley3.png" alt="Ashley" class="center-img">
+        </div>
+        <p>Every day with you is a reminder of how lucky I am. You’re strong, beautiful, and so full of life. I believe in you and all the amazing things you’re destined for.</p>
+        <a href="page7.html" class="btn">Continue the Journey</a>
+    </div>
+
+    <script>
+        window.addEventListener('load', () => {
+            document.body.classList.add('loaded');
+        });
+    </script>
+</body>
+</html>

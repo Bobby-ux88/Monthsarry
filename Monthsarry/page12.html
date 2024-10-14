@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Page 12</title>
+    <link rel="stylesheet" href="styles1.css">
+    <style>
+        /* Add a custom font (Google Fonts example) */
+        body {
+            font-family: 'Arial', sans-serif; /* Change to any font you prefer */
+            opacity: 0;
+            transition: opacity 1s ease-in-out;
+            text-align: center; /* Center the text */
+            padding: 20px;
+        }
+
+        body.loaded {
+            opacity: 1;
+        }
+
+        /* Custom styling for the paragraph */
+        p {
+            font-size: 1.5em;
+            color: #555;
+            line-height: 1.6;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <p>The next page is a song dedicated to you po mahal, it’s called <strong>Blue</strong> by Yung Kai. Whenever I play this song, it reminds me of you, and the beautiful moments we’ve shared.</p>
+        <a href="page13.html" class="btn">Continue the Journey</a>
+    </div>
+
+    <script>
+        window.addEventListener('load', () => {
+            document.body.classList.add('loaded');
+        });
+
+        const links = document.querySelectorAll('a');
+        links.forEach(link => {
+            link.addEventListener('click', (e) => {
+                e.preventDefault();
+                document.body.style.opacity = 0;
+                setTimeout(() => {
+                    window.location = link.href;
+                }, 1000); // Wait for fade-out effect
+            });
+        });
+    </script>
+</body>
+</html>

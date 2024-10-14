@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>October 14</title>
+    <link rel="stylesheet" href="styles1.css">
+    <style>
+        /* Add fade in and fade out effect */
+        body {
+            opacity: 0;
+            transition: opacity 1s ease-in-out;
+        }
+
+        body.loaded {
+            opacity: 1;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>October 14</h1>
+        <div class="image-center">
+            <img src="ashley8.png" alt="Ashley" class="center-img">
+        </div>
+        <p>Today marks another beautiful milestone in our journey together. I am beyond grateful for you, Ashley. You make every day brighter with your love and presence, and I feel so lucky to call you mine.</p>
+        <a href="page12.html" class="btn">Continue</a>
+    </div>
+
+    <script>
+        // Add the fade-in effect when the page loads
+        window.addEventListener('load', () => {
+            document.body.classList.add('loaded');
+        });
+
+        // Add fade-out effect when navigating to a new page
+        const links = document.querySelectorAll('a');
+        links.forEach(link => {
+            link.addEventListener('click', (e) => {
+                e.preventDefault();
+                document.body.style.opacity = 0;
+                setTimeout(() => {
+                    window.location = link.href;
+                }, 1000); // Wait for 1 second (time for fade-out)
+            });
+        });
+    </script>
+</body>
+</html>

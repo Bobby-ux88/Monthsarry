@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Page 15</title>
+    <link rel="stylesheet" href="styles1.css">
+    <style>
+        /* Apply a fade-in effect for page load */
+        body {
+            background-color: #fefefe;
+            opacity: 0;
+            transition: opacity 1s ease-in-out;
+            font-family: 'Dancing Script', cursive;
+            text-align: center;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            height: 100vh;
+            margin: 0;
+        }
+
+        body.loaded {
+            opacity: 1;
+        }
+
+        /* Container Styling */
+        .container {
+            background-color: rgba(255, 255, 255, 0.9);
+            padding: 40px;
+            border-radius: 15px;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+            max-width: 600px;
+            z-index: 10;
+            position: relative;
+            color: #333;
+            font-size: 1.5em;
+            line-height: 1.8;
+        }
+
+        /* Button styling */
+        .btn {
+            padding: 12px 25px;
+            background-color: #ff69b4;
+            color: white;
+            text-decoration: none;
+            border-radius: 30px;
+            font-size: 1.1em;
+            transition: background-color 0.4s ease, transform 0.3s ease;
+            box-shadow: 0 6px 15px rgba(255, 182, 193, 0.6);
+            margin-top: 20px;
+        }
+
+        .btn:hover {
+            background-color: #ff1493;
+            transform: translateY(-3px);
+        }
+
+        /* Adjustments to the button for better appearance */
+        .btn {
+            padding: 10px 20px;
+            font-size: 1.2em;
+            text-align: center;
+        }
+    </style>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <p>I LOVE YOUU MAHAL</p>
+        <p>Happy 7th Monthsary Po!</p>
+
+        <a href="Ashley.html" class="btn">Back to the Beginning</a>
+    </div>
+
+    <!-- JavaScript for fade-in and fade-out effect -->
+    <script>
+        // Fade in effect when the page loads
+        window.addEventListener('load', () => {
+            document.body.classList.add('loaded');
+        });
+
+        // Fade out effect on link click
+        const links = document.querySelectorAll('a');
+        links.forEach(link => {
+            link.addEventListener('click', (e) => {
+                e.preventDefault();
+                document.body.style.opacity = 0; // Start fade-out
+                setTimeout(() => {
+                    window.location = link.href; // Redirect after fade-out
+                }, 1000); // Wait for 1 second (fade-out duration)
+            });
+        });
+    </script>
+</body>
+</html>

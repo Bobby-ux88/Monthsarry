@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Special Journey</title>
+    <link rel="stylesheet" href="styles1.css">
+    <style>
+        /* Fade Out Animation */
+        .fade-out {
+            animation: fadeOut 2s forwards;
+        }
+
+        @keyframes fadeOut {
+            0% { opacity: 1; }
+            100% { opacity: 0; }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Hey Lovee,</h1>
+        <p>I wanted to create something special for you. Click below to take a little journey through our moments together.</p>
+        
+        <!-- Button to go to Page 2 with fade-out effect -->
+        <a id="startJourney" class="btn">Start the Journey</a>
+    </div>
+
+    <script>
+        document.getElementById("startJourney").addEventListener("click", function() {
+            // Add fade-out class to body
+            document.body.classList.add("fade-out");
+
+            // After the fade-out animation (2 seconds), navigate to Page 2
+            setTimeout(function() {
+                window.location.href = "page2.html"; // Link to Page 2
+            }, 2000); // Wait for 2 seconds before navigating
+        });
+    </script>
+</body>
+</html>

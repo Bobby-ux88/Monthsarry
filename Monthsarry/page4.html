@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>March 14</title>
+    <link rel="stylesheet" href="styles1.css">
+    <style>
+        /* Fade In and Out Animation */
+        body {
+            opacity: 0;
+            transition: opacity 1s ease-in-out;
+        }
+
+        body.loaded {
+            opacity: 1;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>March 14</h1>
+        <div class="image-center">
+            <img src="ashley1.png" alt="Ashley" class="center-img">
+        </div>
+        <p>Every day with you is a beautiful new chapter in our journey. Your kindness and strength inspire me, and I'm so grateful to have you by my side. Here's to us!</p>
+        <a href="page5.html" class="btn">Continue the Journey</a>
+    </div>
+
+    <script>
+        window.addEventListener('load', () => {
+            document.body.classList.add('loaded');
+        });
+    </script>
+</body>
+</html>

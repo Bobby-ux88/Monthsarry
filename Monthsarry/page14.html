@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Page 14</title>
+    <link rel="stylesheet" href="styles1.css">
+    <style>
+        /* Add a fade in and fade out effect */
+        body {
+            font-family: 'Arial', sans-serif;
+            opacity: 0;
+            transition: opacity 1s ease-in-out;
+            text-align: center;
+            padding: 20px;
+            background-color: #f0f0f0;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            flex-direction: column;
+            overflow-y: auto; /* Ensure scrollability if content is too large */
+            max-width: 100%;
+            box-sizing: border-box;
+        }
+
+        body.loaded {
+            opacity: 1;
+        }
+
+        /* Container */
+        .container {
+            background-color: rgba(255, 255, 255, 0.9); /* Semi-transparent background */
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2); /* Soft shadow */
+            max-width: 500px;
+            z-index: 10;
+            position: relative;
+            color: #333;
+            font-size: 1.2em;
+            line-height: 1.6;
+            max-height: 80vh; /* Limit height to allow scrolling */
+            overflow-y: auto; /* Enable scrolling for long text */
+        }
+
+        /* Button styling */
+        .btn {
+            padding: 12px 25px;
+            background-color: #ff69b4;
+            color: white;
+            text-decoration: none;
+            border-radius: 30px;
+            font-size: 1.3em;
+            transition: background-color 0.4s ease, transform 0.3s ease;
+            box-shadow: 0 6px 15px rgba(255, 182, 193, 0.6);
+            margin-top: 20px;
+        }
+
+        .btn:hover {
+            background-color: #ff1493;
+            transform: translateY(-3px);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <p>My love, as I sit here writing this, I can’t help but think of how far we’ve come. It feels like it was just yesterday when we first met, and now we’re here, celebrating another beautiful month together. Through all the ups and downs, I’m so grateful for your presence in my life, and I want you to know that no matter how far apart we may be, I’m always here for you. I will always support you, encourage you, and love you unconditionally.</p>
+
+        <p>Even though we may not be in the same place physically, our hearts will always be connected. You’re my constant source of strength, my joy, and the reason behind my smile. You make every day brighter, and I admire your courage, kindness, and the way you light up the world just by being yourself. I am truly lucky to have you, Mahal.</p>
+
+        <p>As we continue on this journey, I’m so excited to see where life will take us. Together, we’ve already created so many beautiful memories, and I’m looking forward to making so many more. Good luck with everything, and know that I will always be by your side, cheering you on no matter what. I love everything about you—the way you think, your gentle heart, and how you always make me feel special. </p>
+
+        <p>So, here’s to our future, filled with love, adventure, and countless monthsaries like this one. I hope we celebrate many more of these moments, filled with laughter, love, and even greater happiness. You are my heart, and I can’t wait to spend forever with you. I love you so much, Mahal.</p>
+
+        <!-- Button to continue to Page 15 -->
+        <a href="page15.html" class="btn">Next</a>
+    </div>
+
+    <!-- JavaScript for fade-in and fade-out effect -->
+    <script>
+        // Fade in effect when the page loads
+        window.addEventListener('load', () => {
+            document.body.classList.add('loaded');
+        });
+
+        // Fade out effect on link click
+        const links = document.querySelectorAll('a');
+        links.forEach(link => {
+            link.addEventListener('click', (e) => {
+                e.preventDefault();
+                document.body.style.opacity = 0; // Start fade-out
+                setTimeout(() => {
+                    window.location = link.href; // Redirect after fade-out
+                }, 1000); // Wait for 1 second (fade-out duration)
+            });
+        });
+    </script>
+</body>
+</html>
